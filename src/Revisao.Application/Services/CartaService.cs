@@ -25,6 +25,12 @@ namespace Revisao.Application.Services
         #endregion
 
         #region - Funções
+        //public void Adicionar(CartaViewModel CartaViewModel)
+        //{
+        //    var Carta = _mapper.Map<Carta>(CartaViewModel);
+        //    _cartaRepository.Adicionar(Carta);
+
+        //}
         public void Adicionar(NovaCartaViewModel novaCartaViewModel)
         {
             var novaCarta = _mapper.Map<Carta>(novaCartaViewModel);
@@ -46,7 +52,11 @@ namespace Revisao.Application.Services
         {
             throw new NotImplementedException();
         }
-
+        //public async Task<IEnumerable<CartaViewModel>> ObterTodos()
+        //{
+        //    var cartas = await _cartaRepository.ObterTodos();
+        //    return _mapper.Map<IEnumerable<CartaViewModel>>(cartas);
+        //}
         public IEnumerable<CartaViewModel> ObterTodos()
         {
             return _mapper.Map<IEnumerable<CartaViewModel>>(_cartaRepository.ObterTodos());

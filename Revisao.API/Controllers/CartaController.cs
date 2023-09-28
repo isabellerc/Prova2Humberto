@@ -16,6 +16,13 @@ namespace Revisao.API.Controllers
             _cartaService = cartaService;
         }
 
+        //[HttpPost(Name = "Adicionar")] //
+        //public IActionResult Post(CartaViewModel nCartaViewModel)
+        //{
+        //    _cartaService.Adicionar(novaCartaViewModel);
+        //    return Ok("Registro adicionado com sucesso!");
+        //}
+
         [HttpPost(Name = "Adicionar")] //
         public IActionResult Post(NovaCartaViewModel novaCartaViewModel)
         {
@@ -24,10 +31,17 @@ namespace Revisao.API.Controllers
         }
 
         [HttpGet(Name = "ObterTodos")] //
-        public IActionResult Get() 
+        public IActionResult Get()
         {
             return Ok(_cartaService.ObterTodos());
         }
+        //[HttpGet(Name = "ObterTodos")] 
+        //public async Task<IActionResult> Get()
+        //{
+        //    var cartas = await _cartaService.ObterTodos();
+        //    return Ok(cartas);
+        //}
+
 
         //public IEnumerable<Carta> ObterTodos()
         //{

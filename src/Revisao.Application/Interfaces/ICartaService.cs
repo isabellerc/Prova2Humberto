@@ -13,7 +13,8 @@ namespace Revisao.Application.Interfaces
         Task<CartaViewModel> ObterPorId(Guid id);
         Task<IEnumerable<CartaViewModel>> ObterPorCategoria(int codigo);
 
-        void Adicionar(NovaCartaViewModel carta);
+        //void Adicionar(CartaViewModel carta);
+        void Adicionar(NovaCartaViewModel novaCartaViewModel);
         void Atualizar(CartaViewModel carta);
        // public void Adicionar(NovaCartaViewModel novaCartaViewModel);
     }

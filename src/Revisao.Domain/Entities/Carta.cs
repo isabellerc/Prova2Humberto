@@ -9,23 +9,6 @@ namespace Revisao.Domain.Entities
 {    
     public class Carta
     {
-        #region Construtores
-        public Carta(string nomeCrianca, string endereco, string bairro, string cidade, string estado, int idade, string textoCarta)
-        {
-  
-            nomeCrianca = nomeCrianca;
-            endereco = endereco;
-            bairro = bairro;
-            cidade = cidade;
-            estado = estado;
-            idade = idade;
-            textoCarta = textoCarta;
-
-        }
-
-        
-        #endregion
-
         #region Propriedades
 
         public string nomeCrianca { get; private set; }
@@ -39,10 +22,28 @@ namespace Revisao.Domain.Entities
         public string estado { get; private set; }
 
         public int idade { get; private set; }
-        
-        public string textoCarta { get; private set; } 
-        
+
+        public string textoCarta { get; private set; }
+
 
         #endregion
+        #region Construtores
+        public Carta(string nomeCrianca, string endereco, string bairro, string cidade, string estado, int idade, string textoCarta)
+        {
+  
+            this.nomeCrianca = nomeCrianca;
+            this.endereco = endereco;
+            this.bairro = bairro;
+            this.cidade = cidade;
+            this.estado = estado;
+            this.idade = idade;
+            this.textoCarta = textoCarta;
+
+        }
+
+        
+        #endregion
+
+        
     }
 }
